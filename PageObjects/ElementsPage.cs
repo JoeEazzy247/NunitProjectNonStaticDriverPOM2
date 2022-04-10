@@ -4,10 +4,10 @@ namespace NUnitProjectPOM.PageObjects
 {
     public class ElementsPage : Base
     {
-        //public ElementsPage(IWebDriver? driver)
-        //{
-        //    this.driver = driver;
-        //}
+        public ElementsPage(IWebDriver? driver)
+        {
+            this.driver = driver;
+        }
 
         #region 
         //Property
