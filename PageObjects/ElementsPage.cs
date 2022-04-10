@@ -2,13 +2,12 @@
 
 namespace NUnitProjectPOM.PageObjects
 {
-    public class ElementsPage 
+    public class ElementsPage : Base
     {
-        readonly IWebDriver? _driver;
-        public ElementsPage(IWebDriver? driver)
-        {
-            this._driver = driver;
-        }
+        //public ElementsPage(IWebDriver? driver)
+        //{
+        //    this.driver = driver;
+        //}
 
         #region 
         //Property
@@ -17,8 +16,7 @@ namespace NUnitProjectPOM.PageObjects
         #endregion
 
 
-
         public void ClickTextBox() =>
-            _driver?.FindElement(TextBox).Click();
+            driver?.FindElement(TextBox).Click();
     }
 }

@@ -3,12 +3,11 @@ using OpenQA.Selenium;
 
 namespace NUnitProjectPOM.PageObjects
 {
-    public class HomePage 
+    public class HomePage : Base
     {
-        private readonly IWebDriver? _driver;
         public HomePage(IWebDriver? driver)
         {
-            this._driver = driver;
+            this.driver = driver;
         }
 
         #region 
@@ -29,23 +28,23 @@ namespace NUnitProjectPOM.PageObjects
 
         //Methods which calls the above properties
         public void ClickElements()=>
-            _driver?.FindElement(Elements).Click();
+            driver?.FindElement(Elements).Click();
 
         public void ClickForms() =>
-            _driver?.FindElement(Forms).Click();
+            driver?.FindElement(Forms).Click();
 
         public void ClickAlertFrameWindows() =>
-            _driver?.FindElement(AlertFramesAndWindows).Click();
+            driver?.FindElement(AlertFramesAndWindows).Click();
 
         public void ClickWidgets() =>
-            _driver?.FindElement(Widget).Click();
+            driver?.FindElement(Widget).Click();
 
         public void ClickBookStoreApplications()
         {
             IWebElement? element = 
-                _driver?.FindElement(BookStoreApplications);
-            element?.ScrollIntoViewViaJs(_driver);
-            element?.ClickViaJs(_driver);
+                driver?.FindElement(BookStoreApplications);
+            element?.ScrollIntoViewViaJs(driver);
+            element?.ClickViaJs(driver);
             //IjavaScriptExtensions.ScrollIntoViewViaJs(element, _driver);
             //IjavaScriptExtensions.ClickViaJs(element, _driver);
         }
